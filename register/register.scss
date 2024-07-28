@@ -1,0 +1,25 @@
+@use '../base';
+
+.userForm {
+  @extend %userForm;
+}
+
+.wrapper {
+  @extend %wrapper;
+}
+
+input {
+  @extend %input;
+}
+
+.button {
+  @extend %button;
+}
+
+.button:hover {
+  @extend %buttonHover;
+}
+
+.informationBanner {
+  @extend %informationBanner;
+}

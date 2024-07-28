@@ -1,0 +1,124 @@
+/**
+######################################
+GLOBAL VARIABLES
+######################################
+ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/**
+######################################
+GLOBAL DEFINITIONS
+######################################
+ */
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.cardWrapper .card {
+  width: 32rem;
+  height: 18rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardWrapper .card .card-text {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 2rem;
+}
+.cardWrapper .card:hover .card-text {
+  opacity: 1;
+}
+.cardWrapper .card img {
+  width: 32rem;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.cardWrapper .card:hover {
+  background-color: #2549d1;
+  color: white;
+}
+
+.event-form-overlay {
+  width: 500px;
+  opacity: 1;
+  max-height: 90vh;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 5vh 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.event-form-overlay b {
+  font-size: 1.5rem;
+}
+
+#event-form {
+  display: none;
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  overflow-y: auto;
+  font-size: 1.2rem;
+}
+
+.close {
+  background-color: #ff3e3e;
+  color: white;
+  border: 1px solid #ff3e3e;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  align-self: flex-end;
+}
+.close:hover {
+  background-color: #a80a0a;
+}
+
+/*# sourceMappingURL=games.css.map */

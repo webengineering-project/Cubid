@@ -1,0 +1,101 @@
+/**
+######################################
+GLOBAL VARIABLES
+######################################
+ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/**
+######################################
+GLOBAL DEFINITIONS
+######################################
+ */
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.informationBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: -50px;
+}
+.informationBanner p {
+  background-color: #ff3e3e;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 8px;
+  border: 2px solid #d32f2f;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper {
+  margin-bottom: 5rem;
+}
+
+.description {
+  margin-top: -15px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.profile_info {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.profile_input[type=text],
+.profile_input[type=password],
+.about_me_profile_input {
+  text-align: left; /* Align text to the left */
+}
+
+.checkbox_input {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.profile_checkbox_container {
+  display: flex;
+  margin-top: 1em;
+}
+
+.profile_image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.button:hover {
+  background-color: #1E40AF;
+}
+
+/*# sourceMappingURL=settings.css.map */

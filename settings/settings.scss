@@ -1,0 +1,64 @@
+@use '../base';
+
+.wrapper {
+  @extend %wrapper;
+  margin-bottom: 5rem;
+}
+
+.informationBanner {
+  @extend %informationBanner;
+}
+
+
+.description {
+  margin-top: -15px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+
+}
+
+.profile_info {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.profile_input[type="text"],
+.profile_input[type="password"],
+.about_me_profile_input {
+  text-align: left; /* Align text to the left */
+}
+
+.checkbox_input {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.profile_checkbox_container {
+  display: flex;
+  margin-top: 1em;
+}
+
+.profile_image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.button:hover {
+  background-color: #1E40AF;
+}
+

@@ -1,0 +1,38 @@
+.event-form {
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  overflow-y: auto;
+}
+
+#event-form-overlay {
+  width: 500px;
+  opacity: 1;
+  max-height: 90vh;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 5vh auto;
+  overflow-y: auto;
+}
+#event-form-overlay #event-form-overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#event-form-overlay .tag-results {
+  display: flex;
+  overflow-y: auto;
+}
+
+/*# sourceMappingURL=event_form.css.map */

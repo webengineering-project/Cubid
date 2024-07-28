@@ -1,0 +1,345 @@
+/**
+######################################
+GLOBAL VARIABLES
+######################################
+ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/**
+######################################
+GLOBAL DEFINITIONS
+######################################
+ */
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.informationBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: -50px;
+}
+.informationBanner p {
+  background-color: #ff3e3e;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 8px;
+  border: 2px solid #d32f2f;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper {
+  margin-bottom: 5rem;
+}
+
+#profile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#profile_content {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.profile_info {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.profile_input[type=text],
+.profile_input[type=password],
+.about_me_profile_input {
+  text-align: left; /* Align text to the left */
+}
+
+.profile_image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.profile_image_large {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+}
+
+.profile_name {
+  text-align: center !important;
+  font-size: 24pt;
+  color: #5d9be4;
+  margin-top: 1rem;
+}
+
+.tables {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80vw;
+}
+
+.tables td,
+.tables th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tables tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tables tr:hover {
+  background-color: #ddd;
+}
+
+.tables th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2549d1;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #1E40AF;
+}
+
+#game-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+#select-game {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  top: 0;
+  overflow-x: hidden;
+  border-right: 2px solid #ccc;
+}
+
+#unselect-game {
+  width: 50%;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#select-game .game-tag, #unselect-game > .game-tag {
+  max-width: 100%;
+}
+
+#event-form-overlay-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.tagList {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.friend_profile:hover {
+  background-color: lightgray;
+}
+
+.friend_profile_container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.friend_profile_img {
+  width: 50px;
+  height: 50px;
+  max-height: 100% !important;
+}
+
+#button-container-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  width: 100%;
+}
+#button-container-form form {
+  width: 49%;
+  margin: 0;
+}
+#button-container-form button {
+  width: 49%;
+  padding: 1rem;
+}
+#button-container-form button#selectedTags {
+  background-color: #2549d1;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+#button-container-form button#selectedTags:hover {
+  background-color: #203faf;
+}
+#button-container-form button.cancel-button {
+  background-color: #ff3e3e;
+  color: #dadada;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#button-container-form button.cancel-button:hover {
+  background-color: #f62a2a;
+  color: #cacaca;
+}
+
+#search_input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0 0 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  text-align: left; /* Align text to the left */
+}
+
+.close {
+  background-color: #ff3e3e;
+  color: white;
+  border: 1px solid #ff3e3e;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  align-self: flex-end;
+}
+.close:hover {
+  background-color: #a80a0a;
+}
+
+.picture_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.picture_form .profilePicSubmit {
+  background-color: #2549d1;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.picture_form .profilePicSubmit:hover {
+  background-color: #203faf;
+}
+.picture_form #placeholderForm {
+  display: none;
+}
+.picture_form .hidden_form {
+  display: none;
+}
+.picture_form .profile_picture_big {
+  width: 200px;
+  height: 200px;
+}
+.picture_form #pictureUrl {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0 0 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  text-align: left; /* Align text to the left */
+}
+
+.friendship_button {
+  background-color: #2549d1;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.friendship_button:hover {
+  background-color: #203faf;
+}
+
+.friendship_button_revoke {
+  background-color: #ff3e3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.friendship_button_revoke:hover {
+  background-color: #f62a2a;
+  color: #cacaca;
+}
+
+#profile_box_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+#profile_box_buttons button {
+  background-color: #2549d1;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+#profile_box_buttons button:hover {
+  background-color: #203faf;
+}
+
+/*# sourceMappingURL=profile.css.map */

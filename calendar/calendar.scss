@@ -1,0 +1,377 @@
+@use '../base';
+
+$hoverColor: #ececec;
+
+.event-container-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 2em 0 2em;
+  align-items: flex-end;
+}
+
+.event-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ececec;
+  color: black;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.event-container:hover {
+  background-color: #cbe3ff;
+}
+
+.event-container.open {
+  background-color: #5d9be4;
+}
+
+.event-button {
+  font-size: 24px;
+}
+
+.event-button.open {
+  background-color: #123eda;
+}
+
+.event-button {
+  margin-left: 1em;
+  width: 3em;
+  height: 3em;
+  background-color: #264FE1;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  transition: box-shadow 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-size: 36pt;
+  }
+}
+
+.calendar-container {
+  padding: 2em;
+  display: flex;
+  height: 85vh;
+  gap: 1em;
+}
+
+.section {
+}
+
+.inbox {
+  flex: 0.5;
+  gap: 20em;
+}
+
+.inbox-container {
+  background-color: #ffffff;
+  border: #1C1C1C;
+  padding: 1em;
+  border-radius: 1em;
+
+  h3 {
+    padding: 0.5rem 0 0.5rem 0;
+    margin: 0;
+  }
+}
+
+.event-text-container {
+  display: flex;
+  flex-direction: row; /* Stack items vertically */
+  align-items: center;
+  gap: 10px; /* Space between items */
+}
+
+.event-text-item {
+  display: flex;
+  align-items: center; /* Align point and text horizontally */
+  gap: 10px; /* Space between point and text */
+}
+
+.event-text {
+  color: #5272E9;
+}
+
+.checkbox {
+  height: 20px;
+  width: 20px;
+}
+
+.event-text-point {
+  width: 15px;
+  height: 15px;
+  background-color: #8098ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-text-point-inner {
+  width: 10px;
+  height: 10px;
+  background-color: #5272E9;
+  border-radius: 50%;
+}
+
+.calendar {
+  flex: 3;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-button {
+  top: 0;
+  right: 0;
+  padding: 8px 12px;
+  background-color: #dadada;
+  color: #FF3E3EFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #cacaca;
+  color: #f62a2a;
+}
+
+.event-form h2 {
+  margin: 0;
+  font-size: 24pt;
+}
+
+.event-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.event-form input[type="text"],
+.event-form textarea,
+.event-form select,
+#datePicker {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14pt;
+  font-family: 'Roboto', sans-serif;
+}
+
+.event-form input[type="checkbox"] {
+  margin-left: 5px;
+}
+
+.event-form input[type="submit"], #updateButton, #deleteButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16pt;
+  transition: background-color 0.3s;
+}
+
+#deleteButton {
+  background-color: base.$errorColor;
+
+  &:hover {
+    background-color: #af2222;
+  }
+}
+
+.event-form input[type="submit"]:hover, #updateButton:hover {
+  background-color: #218838;
+}
+
+#deleteButton, #updateButton {
+  width: 48%;
+}
+
+#eventUpdateButtons{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+:root {
+  --numDays: 7;
+  --numHours: 24;
+  --timeHeight: 60px;
+  --calBgColor: #fff1f8;
+  --eventBorderColor: #f2d3d8;
+  --eventColor1: #ffd6d1;
+  --eventColor2: #fafaa3;
+  --eventColor3: #e2f8ff;
+  --eventColor4: #d1ffe6;
+}
+
+#calendar-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 1rem;
+}
+
+#calendar-button-current-week {
+  padding: 1rem;
+}
+
+#calendar-button-current-week:hover {
+  background-color: $hoverColor;
+  cursor: pointer;
+}
+
+#calendar-button-prev-week, #calendar-button-next-week {
+  padding: 1rem;
+}
+
+#calendar-button-next-week {
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+#calendar-button-prev-week {
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+#calendar-button-next-week:hover, #calendar-button-prev-week:hover {
+  background-color: $hoverColor;
+  cursor: pointer;
+}
+
+#calendar {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: auto 1fr;
+  margin: 2rem;
+}
+
+.timeline {
+  display: grid;
+  grid-template-rows: 40px repeat(calc(var(--numHours) - 1), var(--timeHeight));
+  grid-column: 1;
+  justify-self: left;
+}
+
+
+.days {
+  display: grid;
+  grid-column: 2;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  //grid-template-rows: repeat(1440, 1px);
+}
+
+.events {
+  display: grid;
+  grid-template-rows: repeat(1440, 1px);
+  border-radius: 5px;
+  background: var(--calBgColor);
+}
+
+// Place on Timeline
+
+@for $i from 0 through 23 {
+
+  @for $j from 0 through 5 {
+
+    @for $k from 0 through 9 {
+      @if ($i <=9) {
+        .start-0#{$i}-#{$j}#{$k} {
+          grid-row-start: #{$i*60 + $j*10 + $k + 1};
+          overflow-y: scroll;
+        }
+        .end-0#{$i}-#{$j}#{$k} {
+          grid-row-end: #{$i*60 + $j*10 + $k + 1};
+        }
+      } @else {
+        .start-#{$i}-#{$j}#{$k} {
+          grid-row-start: #{$i*60 + $j*10 + $k + 1};
+          overflow-y: scroll;
+        }
+        .end-#{$i}-#{$j}#{$k} {
+          grid-row-end: #{$i*60 + $j*10 + $k + 1};
+        }
+      }
+    }
+  }
+}
+
+// Event
+
+.title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  word-break: break-word;
+}
+
+.event {
+  border: 1px solid var(--eventBorderColor);
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  background: white;
+}
+
+// Global / Etc
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+.color-grey {
+  background: var(--eventColor1);
+}
+
+.color-yellow {
+  background: var(--eventColor2);
+}
+
+.color-blue {
+  background: var(--eventColor3);
+}
+
+.color-green {
+  background: var(--eventColor4);
+}
+
+.spacer,
+.date {
+  height: 40px
+}
+
+.date {
+  gap: 1em;
+}
+
+.date-num {
+  font-size: 1.2rem;
+  font-weight: 100;
+  display: inline;
+}
+
+.date-day {
+  display: inline;
+  font-size: 1.2rem;
+  font-weight: 400;
+}

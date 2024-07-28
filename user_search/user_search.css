@@ -1,0 +1,136 @@
+/**
+######################################
+GLOBAL VARIABLES
+######################################
+ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/**
+######################################
+GLOBAL DEFINITIONS
+######################################
+ */
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+}
+
+input, select {
+  font-size: 15px;
+  padding: 10px;
+  border: 1px solid #1C1C1C;
+  margin: 5px 0;
+  width: 500px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.container {
+  margin: 4em;
+}
+
+input {
+  width: 30%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+select {
+  width: 20%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.result-count {
+  margin: 0.5rem 0 0.5rem 1em;
+  font-weight: bold;
+  align-self: center;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 20px;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 18em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.user-card-text {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.user-bg {
+  width: 18em;
+  border-radius: 8px;
+}
+
+.user-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  align-self: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.visit_button {
+  background-color: #264FE1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.visit_button:hover {
+  background-color: #1E40AF;
+}
+
+.user-games {
+  display: none;
+}
+
+/*# sourceMappingURL=user_search.css.map */

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <username>cube</username>
+        <password>123</password>
+    </user>
+    <user>
+        <username>test</username>
+        <password>321</password>
+    </user>
+    <user>
+        <username>marcel</username>
+        <password>123</password>
+    </user>
+</users>

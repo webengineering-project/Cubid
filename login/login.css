@@ -1,0 +1,79 @@
+/**
+######################################
+GLOBAL VARIABLES
+######################################
+ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/**
+######################################
+GLOBAL DEFINITIONS
+######################################
+ */
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+}
+
+.userForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+input {
+  font-size: 15px;
+  padding: 10px;
+  border: 1px solid #1C1C1C;
+  margin: 5px 0;
+  width: 500px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #2549d1;
+  color: rgb(255, 255, 255);
+  transition: box-shadow 0.3s;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.button:hover {
+  color: rgb(255, 255, 255);
+  box-shadow: 0 5px 15px rgb(75, 114, 246);
+  cursor: pointer;
+}
+
+.informationBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: -50px;
+}
+.informationBanner p {
+  background-color: #ff3e3e;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 8px;
+  border: 2px solid #d32f2f;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*# sourceMappingURL=login.css.map */

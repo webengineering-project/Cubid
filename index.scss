@@ -1,0 +1,125 @@
+@use 'base';
+
+/**
+######################################
+WRAPPER
+######################################
+ */
+
+.wrapper {
+  @extend %wrapper;
+}
+
+/**
+######################################
+HERO SECTION
+######################################
+ */
+.hero {
+  width: 100vw;
+  height: 50vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+
+  background-image: url("assets/img/banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-color: #1C1C1C;
+  color: white;
+  background-blend-mode: lighten;
+
+  .hero-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 20px;
+    height: 100%;
+  }
+
+  h1, p {
+    margin: 0 0 0 10vw;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  p {
+    padding: 0;
+    font-size: 35px;
+  }
+
+  @media (max-width: 1200px) {
+    p, h1 {
+      margin: 0 0 0 2vw;
+    }
+
+    align-items: center;
+  }
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 25px;
+    }
+  }
+}
+
+/**
+######################################
+HOME CARDS CONTENT
+######################################
+ */
+
+.homeCards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+
+
+  .homeCard {
+    height: 15em;
+    border: 1px solid #8d8d8d;
+    border-radius: 10px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 5px 15px #cecece;
+
+    p {
+      padding: 10px;
+    }
+
+    h2 {
+      font-size: 35px;
+    }
+
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+
+    .homeCard {
+      width: 90%;
+      margin: 10px auto;
+    }
+  }
+}
+
